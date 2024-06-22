@@ -51,14 +51,26 @@ main p {
     border-color: #3867d6;
 }
 
-/* ourstory */
-/* .ourstory_blue_dots{
-    position: absolute;
-    top: 100%;
-    bottom: 0%;
-    left: 50%;
-  } */
   .container{
     overflow: hidden !important;
   }
 
+  /* why choose us */
+  .feature-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .feature-box .icon {
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  .feature-box h5 {
+    font-weight: bold;
+  }
+  
+  .feature-box p {
+    color: #6c757d;
+  }
