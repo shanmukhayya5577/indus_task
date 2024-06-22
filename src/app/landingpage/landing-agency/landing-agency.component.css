@@ -74,3 +74,13 @@ main p {
   .feature-box p {
     color: #6c757d;
   }
+
+/* Ian Klein */
+.testimonial-section {
+  /* background: linear-gradient(180deg, #004085 0%, #007bff 100%); */
+  background-image: url('../../../assets/IanKleinBG.svg');
+}
+
+.footer a {
+  text-decoration: none;
+}
