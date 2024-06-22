@@ -16,6 +16,11 @@ import { OurStoryComponent } from './our-story/our-story.component';
   imports: [
     CommonModule,
     LandingpageRoutingModule
+  ], 
+  exports:[
+    LandingAgencyComponent,
+    ServicesComponent,
+    OurStoryComponent
   ]
 })
 export class LandingpageModule { }

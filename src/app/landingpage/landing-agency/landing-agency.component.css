@@ -11,3 +11,54 @@
     color: black;
     text-decoration: none;
 }
+.container-fluid{
+    overflow: hidden;
+}
+
+/* service */
+
+main img {
+    max-width: 90%;
+    margin-top: 10px;
+}
+main p {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #4b7bec;
+    border-color: #4b7bec;
+}
+
+.btn-primary:hover {
+    background-color: #3867d6;
+    border-color: #3867d6;
+}
+
+/* ourstory */
+/* .ourstory_blue_dots{
+    position: absolute;
+    top: 100%;
+    bottom: 0%;
+    left: 50%;
+  } */
+  .container{
+    overflow: hidden !important;
+  }
+
