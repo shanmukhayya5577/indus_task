@@ -19,7 +19,7 @@ export class MainserviceService {
   editData(id:String, reqBody:any){
     return this.http.put<any>(`${environment.baseUrl}/${id}`,reqBody)
   }
-  deleteData(id:String, reqBody:any){
-    return this.http.delete<any>(`${environment.baseUrl}/${id}`,reqBody)
+  deleteData(id:String){
+    return this.http.delete<any>(`${environment.baseUrl}/${id}`)
   }
 }

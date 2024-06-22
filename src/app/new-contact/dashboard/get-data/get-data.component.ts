@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute, Router } from '@angular/router';
 // import { ToastrService } from 'ngx-toastr';
 import { MainserviceService } from 'src/app/service/mainservice.service';
 
@@ -23,6 +24,7 @@ export class GetDataComponent implements OnInit {
     'adhaar',
     'status',
     'view',
+    'delete'
   ];
   dataSource = new MatTableDataSource<any>();
   // alldetailsSpinner=false;
@@ -33,8 +35,8 @@ export class GetDataComponent implements OnInit {
   pageIndex: any;
   pageSize: any;
   alldetailsSpinner=false;
-
-  constructor(private service:MainserviceService) { }
+  viewContactModal:any;
+  constructor(private service:MainserviceService, private router:Router,private fromQueryParams: ActivatedRoute) { }
   // private toastr: ToastrService
   ngOnInit(): void {
     this.getAllData();
@@ -77,4 +79,31 @@ export class GetDataComponent implements OnInit {
     this.pageIndex = data.pageIndex * data.pageSize;
   }
 
+  onView(data:any){
+    console.log(data)
+    this.viewContactModal = data;
+    this.goToaddDetailsComponent();
+  }
+
+  deleteData(data:any){
+    // this.service.deleteData();
+    console.log(data.id);
+    const deletId = data.id;
+    console.log(deletId);
+    this.alldetailsSpinner = true;
+    this.service.deleteData(deletId).subscribe((res)=>{
+      if(res){
+        this.alldetailsSpinner = false;
+        this.getAllData();
+      } else{
+        this.alldetailsSpinner = false;
+      }
+    })
+  }
+
+  goToaddDetailsComponent(){
+    this.router.navigate(['contact','create','add-data'],{
+      queryParams: this.viewContactModal
+    })
+  }
 }
