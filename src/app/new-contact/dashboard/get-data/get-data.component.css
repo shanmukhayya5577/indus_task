@@ -1,0 +1,79 @@
+.induss-mat-table {
+    position: relative;
+    overflow-x: scroll !important;
+    overflow-y: scroll !important;
+    height: 65vh;
+    z-index: 10;
+  }
+  
+  .induss-mat-table::-webkit-scrollbar {
+    width: 100% !important;
+    height: 12px !important;
+  }
+  
+  .induss-mat-table::-webkit-scrollbar-track {
+    background: white !important;
+  }
+  
+  .induss-mat-table::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+  
+  .induss-mat-table table {
+    width: 100%;
+  }
+  
+  .induss-mat-table .mat-header-cell {
+    font-weight: 600;
+    color: black;
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    font-weight: bold !important;
+  }
+  
+  .induss-mat-table .mat-cell {
+    font-size: 12px !important;
+    white-space: nowrap !important;
+    padding-right: 1em !important;
+  }
+  
+  .induss-mat-table th.mat-header-cell {
+    z-index: 99 !important;
+    border-bottom: none !important;
+  }
+  
+  .induss-mat-table th.mat-header-cell:first-of-type {
+    z-index: 110 !important;
+    border-bottom: none !important;
+    padding-left: 12px !important;
+  }
+  
+  .induss-mat-table th.mat-header-cell:last-of-type {
+    z-index: 99 !important;
+    border-bottom: none !important;
+    padding-right: 1em !important;
+  }
+  
+  .induss-mat-table td.mat-cell {
+    border-bottom: none !important;
+  }
+  
+  .induss-mat-table td.mat-cell:first-of-type {
+    border-bottom: none !important;
+    padding-left: 12px !important;
+  }
+  
+  .induss-mat-table td.mat-cell:last-of-type {
+    border-bottom: none !important;
+    padding-right: 0.25em !important;
+  }
+  
+  .induss-mat-table .mat-header-row {
+    background: #e9eef7 !important;
+  }
+  
+  .induss-mat-table tr:nth-child(odd) {
+    background-color: #fdfbff;
+  }

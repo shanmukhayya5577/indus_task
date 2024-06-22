@@ -1,0 +1,13 @@
+.first-background-image{
+    background-image: url('../../../assets/first_background_image.png');
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    overflow-x: hidden !important;
+}
+
+.nav_a a{
+    color: black;
+    text-decoration: none;
+}

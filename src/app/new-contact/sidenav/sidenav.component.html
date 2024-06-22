@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="navbar-nav mr-auto">
+        <div class="navbar-brand ">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-1 text-right p-0">
+            <button (click)="landingPage()" class="btn btn-primary">Dash Board</button>
+        </div>
+    </div>
+</nav>
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen" >
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/contact/create/add-data']" [routerLinkActive]="['active']" >
+          <span class="listName">Add Data</span>
+        </a>
+        <a mat-list-item [routerLink]="['/contact/create/get-data']" [routerLinkActive]="['active']"  class="mt-4">
+          <span class="listName">View Data</span>
+        </a>
+      </mat-nav-list>
+    </mat-drawer>
+    <router-outlet></router-outlet>
+  </mat-drawer-container>
