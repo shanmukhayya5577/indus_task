@@ -1,79 +1,109 @@
-.first-background-image{
-    background-image: url('../../../assets/first_background_image.png');
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    overflow-x: hidden !important;
+.first-background-image {
+  background-image: url('../../../assets/first_background_image.png');
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  overflow-x: hidden !important;
 }
 
-.nav_a a{
-    color: black;
-    text-decoration: none;
+.nav_a a {
+  color: black;
+  text-decoration: none;
 }
-.container-fluid{
-    overflow: hidden;
+
+.container-fluid {
+  overflow: hidden;
 }
 
 /* service */
 
 main img {
-    max-width: 90%;
-    margin-top: 10px;
+  max-width: 90%;
+  margin-top: 10px;
 }
+
 main p {
-    color: #6c757d;
-    font-size: 1.1rem;
+  color: #6c757d;
+  font-size: 1.1rem;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .card-text {
-    font-size: 1rem;
-    color: #fff;
+  font-size: 1rem;
+  color: #fff;
 }
 
 .btn-primary {
-    background-color: #4b7bec;
-    border-color: #4b7bec;
+  background-color: #4b7bec;
+  border-color: #4b7bec;
 }
 
 .btn-primary:hover {
-    background-color: #3867d6;
-    border-color: #3867d6;
+  background-color: #3867d6;
+  border-color: #3867d6;
 }
 
-  .container{
-    overflow: hidden !important;
-  }
+.container {
+  overflow: hidden !important;
+}
 
-  /* why choose us */
-  .feature-box {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
+.our_service_image{
+    /* position: absolute; */
+    animation-name: animeline;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes animeline {
+
+  0%{
+    left: 0;
+    top:0;
+    rotate: 0deg;
   }
-  
-  .feature-box .icon {
-    font-size: 2rem;
-    color: #007bff;
+  50%{
+    left: 75%;
+    top: 0;
+    rotate: 360deg;
   }
-  
-  .feature-box h5 {
-    font-weight: bold;
+  100%{
+    left: 75%;
+    top: 50%;
+    rotate: 180deg;
   }
-  
-  .feature-box p {
-    color: #6c757d;
-  }
+}
+/* why choose us */
+.feature-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.feature-box .icon {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.feature-box h5 {
+  font-weight: bold;
+}
+
+.feature-box p {
+  color: #6c757d;
+}
 
 /* Ian Klein */
 .testimonial-section {
