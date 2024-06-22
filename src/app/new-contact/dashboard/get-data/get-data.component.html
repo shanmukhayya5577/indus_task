@@ -118,8 +118,11 @@
         </div>
       </div>
       <div class="induss-footer">
-        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" >
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [length]="length"(page)="PageSize($event)">
             <!-- [length]="length"(page)="PageSize($event)" -->
         </mat-paginator>
       </div>
+</div>
+<div *ngIf="alldetailsSpinner" >
+  <div class="spinner"></div>
 </div>

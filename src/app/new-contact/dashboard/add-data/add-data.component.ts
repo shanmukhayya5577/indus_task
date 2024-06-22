@@ -13,6 +13,7 @@ export class AddDataComponent implements OnInit {
   status = ['True', 'False']
   today = new Date();
   maxDate: any = Date;
+  addDataSpinner=false;
 
   constructor(private fb: FormBuilder,private service:MainserviceService) { }
 
@@ -26,7 +27,7 @@ export class AddDataComponent implements OnInit {
       lastName: ['', [Validators.required, Validators.pattern(/^[A-Za-z -]*$/), Validators.minLength(2), Validators.maxLength(30)]],
       gender: ['', [Validators.required]],
       email_id: ['', [Validators.required, Validators.pattern('[[a-zA-Z0-9+_.-.]+@+[a-zA-Z0-9]+[.]+[.a-z]{2,7}')]],
-      mobileNumber: ['', Validators.required, Validators.pattern('^[6-9][0-9]{9}$'),Validators.minLength(10),Validators.maxLength(10)],
+      mobileNumber: ['', [Validators.required, Validators.pattern('^[6-9][0-9]{9}$'),Validators.minLength(10),Validators.maxLength(10)]],
       panNumber: ['', [Validators.required, Validators.pattern('[A-Z]{5}[0-9]{4}[A-Z]{1}')]],
       status: ['', [Validators.required]],
       age: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(3)]],
@@ -52,10 +53,17 @@ export class AddDataComponent implements OnInit {
         createdAt: this.createContactForm?.get('date').value
         // date:this.today
       }
+      this.addDataSpinner = true;
       this.service.postData(reqBody).subscribe((res)=>{
-        console.log(res);
+        if(res){
+          console.log(res);
+          this.addDataSpinner = false;
+        } else {
+          this.addDataSpinner = false;
+        }
       })
     } else {
+      this.addDataSpinner = false;
       this.createContactForm.markAllAsTouched()
     }
   }

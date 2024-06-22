@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+// import { ToastrService } from 'ngx-toastr';
 import { MainserviceService } from 'src/app/service/mainservice.service';
 
 @Component({
@@ -30,10 +31,11 @@ export class GetDataComponent implements OnInit {
   errorMsg: any
   length: any;
   pageIndex: any;
-  pageSize: any
+  pageSize: any;
+  alldetailsSpinner=false;
 
   constructor(private service:MainserviceService) { }
-
+  // private toastr: ToastrService
   ngOnInit(): void {
     this.getAllData();
   }
@@ -52,17 +54,25 @@ export class GetDataComponent implements OnInit {
   }
 
   getAllData(){
+    this.alldetailsSpinner = true;
     this.service.getData().subscribe((res: any = Object)=>{
       console.log(res);
      if(res){
+      // this.toastr.success('Data fetched Successfully');
+      this.alldetailsSpinner = false;
       this.dataSource.data = res;
-      
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+     } else {
+      this.alldetailsSpinner = false;
+      this.errorMsg = 'No Data Found';
+      // this.toastr.error('Something went wrong');
      }
     })
   }
   PageSize(data: any) {
     console.log(data);
-    data.length = this.length;
+    // data.length = this.length;
     this.pageSize = data.pageSize;
     this.pageIndex = data.pageIndex * data.pageSize;
   }
