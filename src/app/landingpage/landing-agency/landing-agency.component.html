@@ -5,11 +5,11 @@
                 <header class="p-3">
                     <nav class="container d-flex align-items-center justify-content-between">
                         <div class="d-flex align-items-center">
-                            <a href="#" class="navbar-brand">Brainwave.io</a>
+                            <a href="#" class="navbar-brand"><strong>Brainwave.io</strong></a>
                             <div class="d-flex mx-5 nav_a">
-                                <a href="#" class="mx-3">Demos</a>
-                                <a href="#" class="mx-3">Pages</a>
-                                <a href="#" class="mx-3">Support</a>
+                                <a href="#" class="mx-3"><strong>Demos</strong></a>
+                                <a href="#" class="mx-3"><strong>Pages</strong></a>
+                                <a href="#" class="mx-3"><strong>Support</strong></a>
                                 <a href="#" class="mx-3" routerLink="/contact/create/add-data">Contact</a>
                             </div>
                         </div>
@@ -80,7 +80,14 @@
         <div class="row justify-content-between">
             <div class="col-md-6 text-start">
                 <p class="text-danger fw-bold">OUR STORY</p>
-                <h2>We know how everything works <br>and why your business is failing <br>over and over again.</h2>
+                <div class="animated-text-conatiner m-0 p-0">
+                    <h3 class="animated-text m-0 p-0"> 
+                        <span>We know how everything works</span>
+              <span>and why your business is failing</span>
+              <span>over and over again.</span>
+                    </h3>
+                </div>
+               
             </div>
             <div class="col-md-6 our_service_image">
                 <img src="../../../assets/ourstory_blue_dots.svg" alt="blue dots">
@@ -88,29 +95,29 @@
         </div>
         <div class="row ">
             <div class="col-md-12 d-flex">
-                <div class="col-md-4 pt-5">
+                <div class="col-md-4 pt-5 animated-image">
                     <img src="../../../assets/our_service_image.png" alt="Image 1" height="100%" width="80%" >
                 </div>
-                <div class="col-md-4 pb-5 mx-5">
-                    <img src="../../../assets/our_service_image2.png" alt="Image 2" height="60%" width="60%">
+                <div class="col-md-4 pb-5 mx-5 ">
+                    <img src="../../../assets/our_service_image2.png" alt="Image 2" height="60%" width="60%" class="animated-image1">
                     <p class="pt-4">We share common trends and strategies for improving your rental income and making
                         sure you stay in high
                         demand. With lots of unique blocks, you can easily build a page without coding. Build your next
                         landing
                         page.</p>
                 </div>
-                <div class="col-md-4 mx-4 pt-5 justify-content-center ">
+                <div class="col-md-4 mx-4 pt-5 justify-content-center animated-image2">
                     <img src="../../../assets/our_service_image3.png" alt="Image 3" height="30%" width="30%">
                 </div>
             </div>
         </div>
         <div class="row ">
             <div class="col-md-4">
-                <h3 class="text-center"><strong>1M+</strong></h3>
+                <h3 class="text-center" ><strong>1M+</strong></h3>
                 <p>Customers visit Omega every month to get their service done.</p>
             </div>
             <div class="col-md-4">
-                <h3 class="text-center"><strong>92%</strong></h3>
+                <h3 class="text-center" id="percent"><strong>{{ displayedPercentage }}%</strong></h3>
                 <p>Satisfaction rate comes from our awesome customers.</p>
             </div>
             <div class="col-md-4">

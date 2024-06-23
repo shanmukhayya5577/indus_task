@@ -17,7 +17,6 @@
 }
 
 /* service */
-
 main img {
   max-width: 90%;
   margin-top: 10px;
@@ -57,6 +56,69 @@ main p {
   overflow: hidden !important;
 }
 
+/* ourstory */
+.animated-text-conatiner {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+}
+.animated-text span {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 0s forwards;
+}
+
+.animated-text span:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.animated-text span:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.animated-text span:nth-child(3) {
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-image {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.5);
+  animation: animateImage 3s forwards;
+}
+
+@keyframes animateImage {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animated-image1:hover{
+  scale: 1.2;
+}
+.animated-image2 {
+  transition: transform 1s, opacity 1s; 
+}
+
+.animated-image2:hover {
+  transform: rotate(10deg) scale(1.2);
+  opacity: 0.8;
+}
 .our_service_image{
     /* position: absolute; */
     animation-name: animeline;
@@ -85,6 +147,7 @@ main p {
     rotate: 180deg;
   }
 }
+
 /* why choose us */
 .feature-box {
   background-color: #f9f9f9;
